@@ -1,0 +1,481 @@
+/* Basic Styles */
+body
+{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Стилі для кнопок*/
+.default-button 
+{
+    background-color: #ff5722;
+    color: #fff;
+    border: 2px solid #ff5722;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+}
+
+.default-button:hover 
+{
+    background-color: rgba(0, 0, 0, 0.0);
+    color: #ff5722;
+}
+
+.order-button
+{
+    background-color: #ff5722;
+    color: #fff;
+    border: 2px solid #ff5722;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+}
+.order-button:hover
+{
+    background-color: rgba(0, 0, 0, 0.0);
+}
+/* Базові стилі для заголовків 2 рівня*/
+h2 
+{
+    font-size: 2em;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+
+/* Header */
+header 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.logo 
+{
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.logo a
+{
+    text-decoration: none;
+    color:#fff;
+}
+
+.menu
+{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li a
+{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative; 
+    transition: color 0.3s ease;
+    padding-bottom: 10px;
+}
+
+.menu li a:hover
+{
+    color: #ff5722; 
+}
+
+/* Лінія при ховері */
+.menu li a::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #ff5722;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.menu li a:hover::before
+{
+    width: 100%;
+}
+.burger-menu 
+{
+    display: none; 
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30px;
+    height: 24px; 
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+}
+
+.burger-menu span 
+{
+    display: block;
+    width: 100%; 
+    height: 4px; 
+    background-color: #fff; 
+    border-radius: 2px; 
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+/* Анімація перетворення на хрестик */
+.burger-menu.active span:nth-child(1)
+{
+    transform: translateY(10px) rotate(45deg); /* Верхня лінія */
+    background-color: #ff5722;
+}
+
+.burger-menu.active span:nth-child(2)
+{
+    opacity: 0; /* Середня лінія зникає */
+}
+
+.burger-menu.active span:nth-child(3)
+{
+    transform: translateY(-10px) rotate(-45deg); /* Нижня лінія */
+    background-color: #ff5722;
+}
+
+
+/* Banner */
+.banner 
+{
+    position: relative;
+    background: url('../img/bunner-background-min.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    padding: 50px 20px;
+    height: 81vh;
+    overflow: hidden;
+    gap:10px;
+}
+
+/* Додавання затемнення */
+.banner::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1; 
+}
+
+.banner h1, .banner p, .order-button
+{
+    position: relative;
+    z-index: 2;
+}
+.banner h1 
+{
+    font-size: 2.5em;
+}
+.banner p
+{
+    font-weight: bold;
+    font-size: 1em;
+}
+.banner button
+{
+    margin-top: 30px;
+}
+
+
+/* Advantages */
+.advantages 
+{
+    padding-top: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 100px;
+    background-color: #f8f8f8;
+}
+.advantages-items
+{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.advantage-item
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1em;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 270px;
+}
+
+.icon 
+{
+    width: 64px;
+    height: 64px;
+}
+
+
+
+/* Catalog */
+.catalog
+{
+    padding-top: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 100px;
+}
+
+.catalog-cards 
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 15px;
+}
+
+.card
+{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover
+{
+    transform: translateY(-10px); /* підняти карточку в гору */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* збільшення тіні */
+    background-color: #f9f9f9; 
+}
+
+.card h3
+{
+    transition: color 0.3s ease;
+    font-size: 1em;
+}
+
+.card:hover h3
+{
+    color: #ff5722;
+}
+.card img 
+{
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Reviews */
+.reviews
+{
+    padding-top: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 100px;
+    overflow: hidden;
+    background-color: #f8f8f8;
+    position: relative;
+}
+
+.slider-container
+{
+    position: relative;
+    max-width: 1000px;
+    margin:auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+  
+  .slider
+  {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide
+  {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding-top: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 70px;
+    text-align: center;
+    background: #ffffff;
+  }
+  
+  .slide img 
+  {
+    max-width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .slide h3 
+  {
+    margin: 10px 0;
+    font-size: 1em;
+  }
+  .prev-btn, .next-btn 
+  {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10%;
+    z-index: 2;
+    font-size: 1.25em
+  }
+  
+  .prev-btn 
+  {
+    left: 10px;
+  }
+  
+  .next-btn 
+  {
+    right: 10px;
+  }
+  
+  .prev-btn:hover, .next-btn:hover 
+  {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+
+/* Contacts */
+.contacts
+{
+    padding-top: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 100px;
+}
+.contacts form
+{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    gap: 20px;
+}
+
+.contacts input, .contacts textarea
+{
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+}
+
+/* Footer */
+
+footer
+{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+}
+footer .social-icons
+{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+
+}
+footer .social-icons a img
+{
+    width: 40px;
+    height: 40px;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) 
+{
+    .burger-menu 
+    {
+        display: flex; /* Відображаємо бургер */
+    }
+
+    /* Стилі для мобільного меню */
+    .menu 
+    {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9); 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .menu.active
+    {
+        display: flex; /* Відображення меню при активації */
+    }
+    .prev-btn, .next-btn 
+    {
+    padding: 8px 15px;
+    }
+    .banner h1 
+    {
+        font-size: 1.8em;
+    }
+
+}
+@media (max-width: 527px) 
+{
+    .banner h1 
+    {
+        font-size: 1.5em;
+    }
+}

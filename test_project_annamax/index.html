@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnackBuddy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo"><a href="index.html">LOGO</a></div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#banner">Головна</a></li>
+                <li><a href="#advantages">Переваги</a></li>
+                <li><a href="#catalog">Каталог</a></li>
+                <li><a href="#reviews">Відгуки</a></li>
+                <li><a href="#contacts">Контакти</a></li>
+                <li><button class="order-button">Замовити</button></li>
+            </ul>
+        </nav>
+        <div class="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section id="banner" class="banner">
+        <h1>Ідеальна пара до вашого напою!</h1>
+        <p>Обирайте смачні снеки для будь-якого настрою та події.</p>
+        <button class="order-button">Обрати снеки</button>
+    </section>
+
+    <!-- Advantages -->
+    <section id="advantages" class="advantages">
+        <h2>Наші переваги</h2>
+        <div class="advantages-items">
+            <div class="advantage-item">
+                <img src="img/free-icon-fresh-11555559.png" alt="Свіжість продуктів" class="icon">
+                Свіжість продуктів
+            </div>
+            <div class="advantage-item">
+                <img src="img/big-assortiment.png" alt="Великий асортимент" class="icon">
+                Великий асортимент
+            </div>
+            <div class="advantage-item">
+                <img src="img/icons8-fast-delivery-64.png" alt="Швидка доставка" class="icon">
+                Швидка доставка
+            </div>
+            <div class="advantage-item">
+                <img src="img/icons8-sale-64.png" alt="Акційні пропозиції" class="icon">
+                Акційні пропозиції
+            </div>
+        </div> 
+    </section>
+
+    <!-- Catalog -->
+    <section id="catalog" class="catalog">
+        <h2>Каталог</h2>
+        <div class="catalog-cards">
+            <div class="card">
+                <img src="img/arakhis.webp" alt="Горішки">
+                <h3>Горішки</h3>
+                <p>Смачні, свіжі та хрусткі.</p>
+                <p>Ціна: 50 грн</p>
+                <button class="default-button">Докладніше</button>
+            </div>
+            <div class="card">
+                <img src="img/chips.webp" alt="Чіпси">
+                <h3>Чіпси</h3>
+                <p>Ідеальні для вечірок.</p>
+                <p>Ціна: 40 грн</p>
+                <button class="default-button">Докладніше</button>
+            </div>
+            <div class="card">
+                <img src="img/crackers.webp" alt="Сухарики">
+                <h3>Сухарики</h3>
+                <p>Хрумкий вибір для напоїв.</p>
+                <p>Ціна: 35 грн</p>
+                <button class="default-button">Докладніше</button>
+            </div>
+            <div class="card">
+                <img src="img/dried_seafood.webp" alt="Сушені морепродукти">
+                <h3>Сушені морепродукти</h3>
+                <p>Екзотичний смак.</p>
+                <p>Ціна: 70 грн</p>
+                <button class="default-button">Докладніше</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="reviews">
+        <h2>Відгуки</h2>
+        <div class="slider-container">
+            <div class="slider">
+              <div class="slide">
+                <img src="img/reviewPeopla1-min.jpg" alt="Фото">
+                <h3>Анна, Київ</h3>
+                <p>Найкращі снеки до вечірки з друзями!</p>
+              </div>
+              <div class="slide">
+                <img src="img/reviewPeopla2-min.jpg" alt="Фото">
+                <h3>Олег, Львів</h3>
+                <p>Дуже швидка доставка і якість на висоті!</p>
+              </div>
+              <div class="slide">
+                <img src="img/reviewPeopla3-min.jpg" alt="Фото">
+                <h3>Марія, Одеса</h3>
+                <p>Замовляю вже втретє – все завжди свіже та смачне!</p>
+              </div>
+            </div>
+            <button class="prev-btn">‹</button>
+            <button class="next-btn">›</button>
+          </div>    
+    </section>
+
+
+    <!-- Contacts -->
+    <section id="contacts" class="contacts">
+        <h2>Зв'яжіться з нами</h2>
+        <form>
+            <input type="text" name="name" placeholder="Ім'я" required>
+            <input type="tel" name="phone" placeholder="Телефон" required>
+            <textarea name="message" placeholder="Повідомлення" required></textarea>
+            <button class="default-button" type="submit">Надіслати заявку</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-icons">
+            <a href="#"><img src="img/free-icon-facebook-4494475.png" alt="Facebook"></a>
+            <a href="#"><img src="img/free-icon-instagram-2111463.png" alt="Instagram"></a>
+            <a href="#"><img src="img/free-icon-logos-14417709.png" alt="Twitter"></a>
+            <a href="#"><img src="img/free-icon-telegram-2111646.png" alt="Telegram"></a>
+        </div>
+        <div class="contacts-info">
+            <p>Телефон: +380 000 000 000</p>
+            <p>Email: test@test.ua</p>
+        </div>
+        <p>&copy; 2024 SnackBuddy</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
